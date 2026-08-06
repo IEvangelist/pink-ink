@@ -1,36 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="42%" r="78%">
-      <stop offset="0%" stop-color="#1E1226"/>
-      <stop offset="60%" stop-color="#120C18"/>
-      <stop offset="100%" stop-color="#09060B"/>
+    <radialGradient id="bg" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#1E1226"/><stop offset="60%" stop-color="#120C18"/><stop offset="100%" stop-color="#09060B"/>
     </radialGradient>
-    <radialGradient id="pinkGlow" cx="50%" cy="52%" r="55%">
-      <stop offset="0%" stop-color="#FF4FA3" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#FF4FA3" stop-opacity="0"/>
+    <linearGradient id="drop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF6FB6"/><stop offset="55%" stop-color="#FF2E93"/><stop offset="100%" stop-color="#E01E7E"/>
+    </linearGradient>
+    <linearGradient id="dropTip" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF6FB6"/><stop offset="50%" stop-color="#FF2E93"/>
+      <stop offset="80%" stop-color="#F42A8C"/><stop offset="100%" stop-color="#3FD6DE"/>
+    </linearGradient>
+    <linearGradient id="dropDuo" x1="0.12" y1="0.05" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#FF7ABC"/><stop offset="45%" stop-color="#FF2E93"/>
+      <stop offset="78%" stop-color="#B93A9E"/><stop offset="100%" stop-color="#33D8E0"/>
+    </linearGradient>
+    <radialGradient id="innerLight" cx="36%" cy="26%" r="60%">
+      <stop offset="0%" stop-color="#FFB4D8" stop-opacity="0.95"/><stop offset="46%" stop-color="#FFB4D8" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="dropFill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2A0E1E"/>
-      <stop offset="100%" stop-color="#160811"/>
-    </linearGradient>
-    <linearGradient id="pinkStroke" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FF83C4"/>
-      <stop offset="100%" stop-color="#FF2E93"/>
-    </linearGradient>
-    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="7" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <radialGradient id="botShade" cx="50%" cy="90%" r="52%">
+      <stop offset="0%" stop-color="#54082F" stop-opacity="0.5"/><stop offset="60%" stop-color="#54082F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gloss" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="haloPink" cx="50%" cy="52%" r="55%">
+      <stop offset="0%" stop-color="#FF4FA3" stop-opacity="0.55"/><stop offset="100%" stop-color="#FF4FA3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="haloCyan" cx="50%" cy="55%" r="60%">
+      <stop offset="0%" stop-color="#2FE3E3" stop-opacity="0.0"/>
+      <stop offset="62%" stop-color="#2FE3E3" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#2FE3E3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-  </defs><rect width="512" height="512" fill="url(#bg)"/>
-  <ellipse cx="256" cy="282" rx="150" ry="172" fill="url(#pinkGlow)"/>
-  <g>
-    <path d="M256 96C300 176 392 264 392 332C392 408 331 456 256 456C181 456 120 408 120 332C120 264 212 176 256 96Z" transform="translate(-6 -3)" fill="none" stroke="#55E6E6" stroke-width="11" stroke-opacity="0.45" stroke-linejoin="round"/>
-    <path d="M256 96C300 176 392 264 392 332C392 408 331 456 256 456C181 456 120 408 120 332C120 264 212 176 256 96Z" transform="translate(6 3)" fill="none" stroke="#D979FF" stroke-width="11" stroke-opacity="0.45" stroke-linejoin="round"/>
+    <filter id="ring" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="13"/></filter></defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <ellipse cx="256" cy="286" rx="150" ry="172" fill="url(#haloPink)"/>
+  
+  <g filter="url(#glow)"><path d="M256 96C300 176 392 264 392 332C392 408 331 456 256 456C181 456 120 408 120 332C120 264 212 176 256 96Z" fill="url(#dropDuo)"/></g>
+  <path d="M256 96C300 176 392 264 392 332C392 408 331 456 256 456C181 456 120 408 120 332C120 264 212 176 256 96Z" fill="url(#innerLight)"/>
+  <path d="M256 96C300 176 392 264 392 332C392 408 331 456 256 456C181 456 120 408 120 332C120 264 212 176 256 96Z" fill="url(#botShade)"/>
+  <path d="M256 96C300 176 392 264 392 332C392 408 331 456 256 456C181 456 120 408 120 332C120 264 212 176 256 96Z" fill="none" stroke="#FFC2E2" stroke-width="3" opacity="0.6"/>
+  <ellipse cx="208" cy="214" rx="11" ry="23" fill="#ffffff" opacity="0.7" transform="rotate(-20 208 214)"/>
+  <ellipse cx="216" cy="240" rx="52" ry="76" fill="url(#gloss)" transform="rotate(-18 216 240)"/>
+  <g transform="translate(256 286) scale(1.05) translate(-256 -286)">
+    <g stroke="#FFB0D9" stroke-width="25" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5" transform="translate(0 4)"><path d="M242 240 C222 240 222 260 222 282 C222 300 210 306 196 306 C210 306 222 312 222 334 C222 356 222 372 242 372"/><path d="M270 240 C290 240 290 260 290 282 C290 300 302 306 316 306 C302 306 290 312 290 334 C290 356 290 372 270 372"/></g>
+    <g stroke="#140610" stroke-width="24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M242 240 C222 240 222 260 222 282 C222 300 210 306 196 306 C210 306 222 312 222 334 C222 356 222 372 242 372"/><path d="M270 240 C290 240 290 260 290 282 C290 300 302 306 316 306 C302 306 290 312 290 334 C290 356 290 372 270 372"/></g>
   </g>
-  <g filter="url(#glow)">
-    <path d="M256 96C300 176 392 264 392 332C392 408 331 456 256 456C181 456 120 408 120 332C120 264 212 176 256 96Z" fill="url(#dropFill)" stroke="url(#pinkStroke)" stroke-width="16" stroke-linejoin="round"/>
-    <path d="M256 96C300 176 392 264 392 332C392 408 331 456 256 456C181 456 120 408 120 332C120 264 212 176 256 96Z" fill="none" stroke="#FFB8DE" stroke-width="4.5" stroke-linejoin="round" opacity="0.85"/>
-  </g>
-  <ellipse cx="214" cy="300" rx="24" ry="40" fill="#FFFFFF" opacity="0.15" transform="rotate(-18 214 300)"/>
-  <path transform="translate(384 150) scale(1.05)" d="M0 -30 C4 -8 8 -4 30 0 C8 4 4 8 0 30 C-4 8 -8 4 -30 0 C-8 -4 -4 -8 0 -30 Z" fill="#8FF3F3" opacity="0.92"/>
 </svg>
