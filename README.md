@@ -7,10 +7,10 @@
 **A neon-pink-on-ink dark theme and a crisp-white, vivid light theme for Visual Studio Code.**
 No italics. Complementary cyan &amp; magenta accents. Every color audited to WCAG AA.
 
-[![Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/IEvangelist.pink-ink?label=Marketplace&labelColor=100C12&color=FF4FA3)](https://marketplace.visualstudio.com/items?itemName=IEvangelist.pink-ink)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/IEvangelist.pink-ink?labelColor=100C12&color=FF4FA3)](https://marketplace.visualstudio.com/items?itemName=IEvangelist.pink-ink)
-[![Rating](https://img.shields.io/visual-studio-marketplace/r/IEvangelist.pink-ink?labelColor=100C12&color=FF4FA3)](https://marketplace.visualstudio.com/items?itemName=IEvangelist.pink-ink&ssr=false#review-details)
-[![Open VSX Version](https://img.shields.io/open-vsx/v/IEvangelist/pink-ink?label=Open%20VSX&labelColor=100C12&color=D979FF)](https://open-vsx.org/extension/IEvangelist/pink-ink)
+[![Marketplace Version](https://vsmarketplacebadges.dev/version-short/davidpine-dev.pink-ink.svg)](https://marketplace.visualstudio.com/items?itemName=davidpine-dev.pink-ink)
+[![Installs](https://vsmarketplacebadges.dev/installs-short/davidpine-dev.pink-ink.svg)](https://marketplace.visualstudio.com/items?itemName=davidpine-dev.pink-ink)
+[![Rating](https://vsmarketplacebadges.dev/rating-star/davidpine-dev.pink-ink.svg)](https://marketplace.visualstudio.com/items?itemName=davidpine-dev.pink-ink&ssr=false#review-details)
+[![Open VSX Version](https://img.shields.io/open-vsx/v/davidpine-dev/pink-ink?label=Open%20VSX&labelColor=100C12&color=D979FF)](https://open-vsx.org/extension/davidpine-dev/pink-ink)
 [![CI](https://github.com/IEvangelist/pink-ink/actions/workflows/ci.yml/badge.svg)](https://github.com/IEvangelist/pink-ink/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-55E6E6?labelColor=100C12)](https://github.com/IEvangelist/pink-ink/blob/main/LICENSE)
 
@@ -44,16 +44,16 @@ Both themes intentionally avoid italic token styling, spread meaning across a wi
 **From the command line**
 
 ```bash
-code --install-extension IEvangelist.pink-ink
+code --install-extension davidpine-dev.pink-ink
 ```
 
 **From Quick Open** - press `Ctrl+P` (`Cmd+P` on macOS), then run:
 
 ```
-ext install IEvangelist.pink-ink
+ext install davidpine-dev.pink-ink
 ```
 
-PinkInk is also published on the [Open VSX Registry](https://open-vsx.org/extension/IEvangelist/pink-ink) for VSCodium, Gitpod, and other compatible editors.
+PinkInk is also published on the [Open VSX Registry](https://open-vsx.org/extension/davidpine-dev/pink-ink) for VSCodium, Gitpod, and other compatible editors.
 
 **Activate a theme** - press `Ctrl+K Ctrl+T` (`Cmd+K Cmd+T` on macOS) for **Preferences: Color Theme**, then choose **PinkInk Dark** or **PinkInk Light**.
 
