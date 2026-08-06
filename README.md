@@ -16,6 +16,12 @@ No italics. Complementary cyan &amp; magenta accents. Every color audited to WCA
 
 <img src="https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/pink-ink-dark.png" width="840" alt="PinkInk Dark editor preview" />
 
+<sub><b>PinkInk Dark</b> &mdash; showcase workspace with the Chat panel</sub>
+
+<img src="https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/pink-ink-light.png" width="840" alt="PinkInk Light editor preview" />
+
+<sub><b>PinkInk Light</b> &mdash; showcase workspace with the Chat panel</sub>
+
 </div>
 
 ---
