@@ -1,0 +1,84 @@
+:root {
+  color-scheme: dark;
+  --ink: #100c12;
+  --paper: #ffffff;
+  --pink: #ff4fa3;
+  --cyan: #55e6e6;
+  --magenta: #d979ff;
+  --radius: 1.25rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-block-size: 100vh;
+  margin: 0;
+  color: var(--paper);
+  background: var(--ink);
+  font: 500 1rem/1.6 system-ui, sans-serif;
+}
+
+.palette {
+  inline-size: min(68rem, calc(100% - 3rem));
+  margin-inline: auto;
+  padding-block: clamp(4rem, 12vw, 9rem);
+}
+
+.palette__header h1 {
+  max-inline-size: 8ch;
+  margin: 0;
+  color: var(--pink);
+  font-size: clamp(4rem, 14vw, 10rem);
+  letter-spacing: -0.08em;
+  line-height: 0.85;
+}
+
+.eyebrow {
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1px;
+  margin-block-start: 5rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--pink) 35%, transparent);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--pink) 25%, transparent);
+}
+
+.swatch {
+  display: grid;
+  min-block-size: 11rem;
+  align-content: end;
+  padding: 1.5rem;
+  background: #1c141d;
+}
+
+.swatch--pink strong {
+  color: var(--pink);
+}
+
+.swatch--cyan strong {
+  color: var(--cyan);
+}
+
+.swatch--magenta strong {
+  color: var(--magenta);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .swatch {
+    transition: background-color 180ms ease, translate 180ms ease;
+  }
+
+  .swatch:hover {
+    background: #291b28;
+    translate: 0 -0.25rem;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://example.com/pink-ink.schema.json",
+  "name": "PinkInk",
+  "author": "David Pine",
+  "version": 1,
+  "published": false,
+  "description": null,
+  "modes": [
+    "dark",
+    "light"
+  ],
+  "colors": {
+    "pink": "#FF4FA3",
+    "cyan": "#55E6E6",
+    "magenta": "#D979FF",
+    "lightCanvas": "#FFFFFF",
+    "darkCanvas": "#100C12",
+    "lightForeground": "#24101F",
+    "lightPrimary": "#C0005C",
+    "lightCyan": "#006873",
+    "lightMagenta": "#8610A8"
+  },
+  "metrics": {
+    "darkForegroundContrast": 16.21,
+    "lightForegroundContrast": 17.97
+  }
+}

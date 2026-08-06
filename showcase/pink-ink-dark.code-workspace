@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "name": "PinkInk Theme Showcase",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "workbench.colorTheme": "pink-ink-dark",
+    "workbench.startupEditor": "none",
+    "workbench.tree.indent": 16,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.minimap.enabled": true,
+    "editor.renderWhitespace": "selection",
+    "editor.stickyScroll.enabled": true
+  }
+}

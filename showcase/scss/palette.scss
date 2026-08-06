@@ -1,0 +1,51 @@
+// PinkInk showcase: SCSS variables (blue), functions (cyan), map keys
+// (magenta), selectors, at-rules, and property names.
+
+$min-contrast: 4.5;
+$max-swatches: 8;
+
+$swatches: (
+  "pink": (name: "Neon Pink", hex: #ff4fa3, contrast: 6.37),
+  "cyan": (name: "Electric Cyan", hex: #55e6e6, contrast: 13.2),
+  "magenta": (name: "Hot Magenta", hex: #d979ff, contrast: 8.45),
+);
+
+@function accessible($contrast) {
+  @return $contrast >= $min-contrast;
+}
+
+@mixin swatch-chip($accent) {
+  $entry: map-get($swatches, $accent);
+  $hex: map-get($entry, hex);
+
+  color: mix($hex, #24101f, 82%);
+  border: 1px solid rgba($hex, 0.4);
+  font-variant-numeric: tabular-nums;
+
+  &::before {
+    content: map-get($entry, name);
+  }
+}
+
+.palette {
+  display: grid;
+  gap: 0.75rem;
+
+  @each $accent, $entry in $swatches {
+    .swatch--#{$accent} {
+      @include swatch-chip($accent);
+
+      @if accessible(map-get($entry, contrast)) {
+        outline: 2px solid map-get($entry, hex);
+      } @else {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .palette {
+    background-color: #1a0a14;
+  }
+}

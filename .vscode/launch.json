@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Preview PinkInk Dark",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}",
+        "${workspaceFolder}/showcase/pink-ink-dark.code-workspace",
+        "${workspaceFolder}/showcase/csharp/Palette.cs"
+      ]
+    },
+    {
+      "name": "Preview PinkInk Light",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}",
+        "${workspaceFolder}/showcase/pink-ink-light.code-workspace",
+        "${workspaceFolder}/showcase/csharp/Palette.cs"
+      ]
+    }
+  ]
+}

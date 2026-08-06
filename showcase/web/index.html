@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ff4fa3">
+    <title>PinkInk Palette</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="palette" aria-labelledby="page-title">
+      <header class="palette__header">
+        <p class="eyebrow">David Pine presents</p>
+        <h1 id="page-title">PinkInk</h1>
+        <p>A neon tattoo-inspired theme with a softer side.</p>
+      </header>
+
+      <section class="swatches" aria-label="Signature colors">
+        <article class="swatch swatch--pink" data-contrast="6.37">
+          <strong>Neon Pink</strong>
+          <code>#FF4FA3</code>
+        </article>
+        <article class="swatch swatch--cyan" data-contrast="13.2">
+          <strong>Electric Cyan</strong>
+          <code>#55E6E6</code>
+        </article>
+        <article class="swatch swatch--magenta" data-contrast="8.45">
+          <strong>Hot Magenta</strong>
+          <code>#D979FF</code>
+        </article>
+      </section>
+    </main>
+
+    <script type="module">
+      const cards = document.querySelectorAll(".swatch");
+      cards.forEach((card, index) => {
+        card.setAttribute("aria-posinset", String(index + 1));
+      });
+    </script>
+  </body>
+</html>

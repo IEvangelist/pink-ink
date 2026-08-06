@@ -1,0 +1,10 @@
+PinkInk uses the organization and TextMate scope coverage of the Visual Studio
+Code built-in Dark Modern, Light Modern, Dark+, and Light+ themes as a starting
+point.
+
+Visual Studio Code
+Copyright (c) Microsoft Corporation
+https://github.com/microsoft/vscode
+
+Visual Studio Code is licensed under the MIT License:
+https://github.com/microsoft/vscode/blob/main/LICENSE.txt

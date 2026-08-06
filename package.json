@@ -1,0 +1,70 @@
+{
+  "name": "pink-ink",
+  "displayName": "PinkInk",
+  "description": "A neon-pink-on-ink dark theme and a crisp-white, cool-gray light theme with vivid cyan and magenta accents.",
+  "version": "0.0.1",
+  "publisher": "IEvangelist",
+  "author": {
+    "name": "David Pine"
+  },
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "homepage": "https://github.com/IEvangelist/pink-ink#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IEvangelist/pink-ink.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IEvangelist/pink-ink/issues"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "pink",
+    "cyan",
+    "magenta",
+    "neon",
+    "dark theme",
+    "light theme",
+    "color theme",
+    "non-italic"
+  ],
+  "extensionKind": [
+    "ui"
+  ],
+  "galleryBanner": {
+    "color": "#100C12",
+    "theme": "dark"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "id": "pink-ink-dark",
+        "label": "PinkInk Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pink-ink-dark-color-theme.json"
+      },
+      {
+        "id": "pink-ink-light",
+        "label": "PinkInk Light",
+        "uiTheme": "vs",
+        "path": "./themes/pink-ink-light-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "check": "npm run check:theme && npm test && npm run check:contrast",
+    "package": "vsce package --no-rewrite-relative-links",
+    "publish": "vsce publish",
+    "check:theme": "node ./scripts/validate-themes.mjs",
+    "check:contrast": "node ./scripts/check-contrast.mjs",
+    "test": "node --test ./scripts/color-contrast.test.mjs"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.9.2"
+  }
+}

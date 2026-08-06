@@ -1,0 +1,36 @@
+name: PinkInk
+author: David Pine
+version: 1
+published: false
+description: null
+
+modes:
+  dark:
+    canvas: "#100C12"
+    foreground: "#F2E8EF"
+    primary: "#FF4FA3"
+    accents:
+      - name: Electric Cyan
+        value: "#55E6E6"
+      - name: Hot Magenta
+        value: "#D979FF"
+
+  light:
+    canvas: "#FFFFFF"
+    foreground: "#24101F"
+    primary: "#C0005C"
+    accents:
+      - name: Deep Cyan
+        value: "#006873"
+      - name: Plum Magenta
+        value: "#8610A8"
+
+preview_defaults: &preview_defaults
+  enabled: true
+  opacity: 0.92
+  fallback: null
+
+preview:
+  <<: *preview_defaults
+  featured: false
+  tagged_version: !!str 1

@@ -1,0 +1,64 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Publish to Marketplace and Open VSX (requires VSCE_PAT / OVSX_PAT secrets)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Package & publish
+    runs-on: ubuntu-latest
+    env:
+      VSCE_PAT: ${{ secrets.VSCE_PAT }}
+      OVSX_PAT: ${{ secrets.OVSX_PAT }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate themes, run tests, and check contrast
+        run: npm run check
+
+      - name: Package extension
+        run: npm run package
+
+      - name: Resolve VSIX filename
+        id: vsix
+        run: echo "path=$(ls *.vsix | head -n1)" >> "$GITHUB_OUTPUT"
+
+      - name: Attach VSIX to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@3d0d9888cb7fd7b750713d6e236d1fcb99157228 # v3.0.2
+        with:
+          files: ${{ steps.vsix.outputs.path }}
+          fail_on_unmatched_files: true
+
+      - name: Publish to Visual Studio Marketplace
+        if: ${{ (startsWith(github.ref, 'refs/tags/') || github.event.inputs.publish == 'true') && env.VSCE_PAT != '' }}
+        run: npm run publish -- --packagePath "${{ steps.vsix.outputs.path }}"
+
+      - name: Publish to Open VSX
+        if: ${{ (startsWith(github.ref, 'refs/tags/') || github.event.inputs.publish == 'true') && env.OVSX_PAT != '' }}
+        uses: HaaLeo/publish-vscode-extension@ca5561daa085dee804bf9f37fe0165785a9b14db # v2.0.0
+        with:
+          pat: ${{ secrets.OVSX_PAT }}
+          extensionFile: ${{ steps.vsix.outputs.path }}
+          registryUrl: https://open-vsx.org

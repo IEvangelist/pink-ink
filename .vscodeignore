@@ -1,0 +1,11 @@
+.vscode/**
+showcase/**
+scripts/**
+node_modules/**
+.gitignore
+package-lock.json
+*.vsix
+.github/**
+.npmrc
+images/**
+!images/icon.png
