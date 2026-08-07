@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.0.3
+
+- Colorized the Activity Bar (far-left toolbar): resting icons are a lighter pink, the active icon is brighter, and the active item gains a subtle pink background fill in both themes.
+- Extended the pink treatment to the top menu bar (File, Edit, Selection, ...), the window title, and the top-right layout icons via `titleBar.activeForeground`, with a softer pink for the unfocused-window title.
+- Colorized the status bar text and icons (line and column, language mode, encoding, notifications, and error/warning counts) with a matching pink in both themes.
+- Pinkified the light theme's menu dropdown selection highlight, which was previously an off-brand cool gray, to match the dark theme.
+
 ## 0.0.2
 
 - Fixed the Command Center turning green while a Copilot agent session is active by retinting `agentStatusIndicator.background` to the subtle Command Center active surface in both themes.
