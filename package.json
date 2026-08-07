@@ -2,7 +2,7 @@
   "name": "pink-ink",
   "displayName": "PinkInk",
   "description": "A neon-pink-on-ink dark theme and a crisp-white, cool-gray light theme with vivid cyan and magenta accents.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "davidpine-dev",
   "author": {
     "name": "David Pine"
@@ -45,12 +45,14 @@
       {
         "id": "pink-ink-dark",
         "label": "PinkInk Dark",
+        "description": "David Pine",
         "uiTheme": "vs-dark",
         "path": "./themes/pink-ink-dark-color-theme.json"
       },
       {
         "id": "pink-ink-light",
         "label": "PinkInk Light",
+        "description": "David Pine",
         "uiTheme": "vs",
         "path": "./themes/pink-ink-light-color-theme.json"
       }

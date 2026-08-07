@@ -385,7 +385,6 @@ const explicitUiColorPairs = [
   ["agentsChatInput.focusBorder", ["agentsChatInput.background"]],
   ["agentSessionSelectedBadge.border", ["agentsPanel.background"]],
   ["agentSessionSelectedUnfocusedBadge.border", ["agentsPanel.background"]],
-  ["agentStatusIndicator.background", ["agentsPanel.background"]],
   ["agentsNewSessionButton.background", ["agentsPanel.background"]],
   ["agentsNewSessionButton.hoverBackground", ["agentsPanel.background"]],
   ["agentsBadge.background", ["agentsPanel.background"]],

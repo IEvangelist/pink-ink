@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.2
+
+- Fixed the Command Center turning green while a Copilot agent session is active by retinting `agentStatusIndicator.background` to the subtle Command Center active surface in both themes.
+- Surfaced the author "David Pine" in the color theme picker by adding a `description` to each contributed theme.
+
 ## 0.0.1
 
 - Added PinkInk Dark with neon-pink-on-blackened-plum styling.

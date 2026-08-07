@@ -403,7 +403,7 @@
     "agentSessionReadIndicator.foreground": "#55E6E6",
     "agentSessionSelectedBadge.border": "#FF4FA3",
     "agentSessionSelectedUnfocusedBadge.border": "#A994A2",
-    "agentStatusIndicator.background": "#74E0B1",
+    "agentStatusIndicator.background": "#241824",
     "inlineChat.background": "#1C141D",
     "inlineChat.foreground": "#F2E8EF",
     "inlineChat.border": "#D979FF",
