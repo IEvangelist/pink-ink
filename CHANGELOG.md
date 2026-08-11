@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.0.4
+
+- Overhauled diff colors so added and removed lines are much easier to tell apart: bolder rose fills for deletions and teal fills for insertions, with brighter word-level highlights on the exact tokens that changed, in both themes.
+- Strengthened the inline-chat diff highlights (`inlineChatDiff.inserted` / `inlineChatDiff.removed`) to match.
+- Diff line and word fills are audited as non-text UI cues (minimum 3:1) while the code on top of them still clears the 4.5:1 text contrast floor.
+- Refreshed the README screenshots to reflect the pink workbench chrome and added a diff-readability showcase.
+
 ## 0.0.3
 
 - Colorized the Activity Bar (far-left toolbar): resting icons are a lighter pink, the active icon is brighter, and the active item gains a subtle pink background fill in both themes.

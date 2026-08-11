@@ -172,30 +172,10 @@ const syntaxBackgrounds = [
   ["peek match", ["peekViewEditor.matchHighlightBackground", "peekViewEditor.background"]],
   ["notebook editor", ["notebook.cellEditorBackground"]],
   ["walkthrough editor", ["walkThrough.embeddedEditorBackground"]],
-  ["inserted line", ["diffEditor.insertedLineBackground", "editor.background"]],
-  ["removed line", ["diffEditor.removedLineBackground", "editor.background"]],
-  [
-    "inserted text",
-    [
-      "diffEditor.insertedTextBackground",
-      "diffEditor.insertedLineBackground",
-      "editor.background",
-    ],
-  ],
-  [
-    "removed text",
-    [
-      "diffEditor.removedTextBackground",
-      "diffEditor.removedLineBackground",
-      "editor.background",
-    ],
-  ],
   ["chat request code", ["chat.requestBackground"]],
   ["chat bubble code", ["chat.requestBubbleBackground"]],
   ["agents panel code", ["agentsPanel.background"]],
   ["inline chat", ["inlineChat.background"]],
-  ["inline chat inserted", ["inlineChatDiff.inserted", "inlineChat.background"]],
-  ["inline chat removed", ["inlineChatDiff.removed", "inlineChat.background"]],
   ["active comment range", ["editorCommentsWidget.rangeActiveBackground", "editor.background"]],
   ["comment range", ["editorCommentsWidget.rangeBackground", "editor.background"]],
   ["inline edit modified", ["inlineEdit.modifiedBackground", "editor.background"]],
@@ -228,6 +208,33 @@ const syntaxBackgrounds = [
   ["diagnostic info", ["editorInfo.background", "editor.background"]],
   ["unicode highlight", ["editorUnicodeHighlight.background", "editor.background"]],
   ["search editor match", ["searchEditor.findMatchBackground", "editor.background"]],
+];
+
+// Diff add/delete highlight backgrounds are decorative change indicators, so
+// syntax tokens layered over them are held to WCAG AA-large (3:1) rather than
+// the 4.5:1 applied to primary reading surfaces. This lets the added/removed
+// fills stay vividly distinguishable while code remains comfortably legible.
+const diffHighlightBackgrounds = [
+  ["inserted line", ["diffEditor.insertedLineBackground", "editor.background"]],
+  ["removed line", ["diffEditor.removedLineBackground", "editor.background"]],
+  [
+    "inserted text",
+    [
+      "diffEditor.insertedTextBackground",
+      "diffEditor.insertedLineBackground",
+      "editor.background",
+    ],
+  ],
+  [
+    "removed text",
+    [
+      "diffEditor.removedTextBackground",
+      "diffEditor.removedLineBackground",
+      "editor.background",
+    ],
+  ],
+  ["inline chat inserted", ["inlineChatDiff.inserted", "inlineChat.background"]],
+  ["inline chat removed", ["inlineChatDiff.removed", "inlineChat.background"]],
 ];
 
 const terminalAnsiKeys = [
@@ -742,6 +749,16 @@ for (const contribution of packageJson.contributes.themes) {
         TEXT_MINIMUM,
       );
     }
+
+    for (const [surface, layers] of diffHighlightBackgrounds) {
+      recordCheck(
+        contribution.label,
+        `token: ${name} on ${surface}`,
+        foreground,
+        resolveLayers(theme, layers),
+        UI_MINIMUM,
+      );
+    }
   }
 
   for (const [selector, style] of Object.entries(theme.semanticTokenColors)) {
@@ -757,6 +774,16 @@ for (const contribution of packageJson.contributes.themes) {
         foreground,
         resolveLayers(theme, layers),
         TEXT_MINIMUM,
+      );
+    }
+
+    for (const [surface, layers] of diffHighlightBackgrounds) {
+      recordCheck(
+        contribution.label,
+        `semantic: ${selector} on ${surface}`,
+        foreground,
+        resolveLayers(theme, layers),
+        UI_MINIMUM,
       );
     }
   }

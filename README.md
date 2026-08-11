@@ -16,11 +16,11 @@ No italics. Complementary cyan &amp; magenta accents. Every color audited to WCA
 
 <img src="https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/pink-ink-dark.png" width="840" alt="PinkInk Dark editor preview" />
 
-<sub><b>PinkInk Dark</b> &mdash; showcase workspace with the Chat panel</sub>
+<sub><b>PinkInk Dark</b> &mdash; the showcase workspace with pink-tinted workbench chrome</sub>
 
 <img src="https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/pink-ink-light.png" width="840" alt="PinkInk Light editor preview" />
 
-<sub><b>PinkInk Light</b> &mdash; showcase workspace with the Chat panel</sub>
+<sub><b>PinkInk Light</b> &mdash; the showcase workspace with pink-tinted workbench chrome</sub>
 
 </div>
 
@@ -78,6 +78,14 @@ A few of the languages PinkInk styles, shown in **PinkInk Dark**:
 | [![Python](https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/lang-python.png)](https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/lang-python.png) | [![Rust](https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/lang-rust.png)](https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/lang-rust.png) |
 | **Go** | **CSS** |
 | [![Go](https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/lang-go.png)](https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/lang-go.png) | [![CSS](https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/lang-css.png)](https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/lang-css.png) |
+
+## Diff readability
+
+Inserted and deleted lines use bold, clearly separated fills &mdash; teal for additions and rose for removals &mdash; with brighter word-level highlights on the exact tokens that changed, so a diff is easy to scan at a glance in both themes.
+
+| PinkInk Dark | PinkInk Light |
+| :---: | :---: |
+| [![Dark diff](https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/diff-dark.png)](https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/diff-dark.png) | [![Light diff](https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/diff-light.png)](https://raw.githubusercontent.com/IEvangelist/pink-ink/main/images/diff-light.png) |
 
 ## Palette
 
