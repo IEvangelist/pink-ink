@@ -67,6 +67,6 @@
     "test": "node --test ./scripts/color-contrast.test.mjs"
   },
   "devDependencies": {
-    "@vscode/vsce": "^3.9.2"
+    "@vscode/vsce": "^4.0.0"
   }
 }
